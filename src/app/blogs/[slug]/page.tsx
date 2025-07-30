@@ -6,14 +6,14 @@ import Loading from "@/components/Loading";
 const BlogDetail = async ({
   params,
 }: {
-  params: Promise<{ objectId: string }>;
+  params: Promise<{ slug: string }>;
 }) => {
-  const objectId = (await params).objectId;
+  const slug = (await params).slug;
   return (
     <main className="container mx-auto px-4 pb-20">
       <Suspense fallback={<Loading/>}>
-        <BlogHeader objectId={objectId} />
-        <BlogBody objectId={objectId} />
+        <BlogHeader slug={slug} />
+        <BlogBody slug={slug} />
       </Suspense>
     </main>
   );
