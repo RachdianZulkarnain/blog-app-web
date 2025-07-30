@@ -4,11 +4,11 @@ import { Badge } from "@/components/ui/badge";
 import { format } from "date-fns";
 import Image from "next/image";
 interface BlogHeaderProps {
-  objectId: string;
+  slug: string;
 }
 
-const BlogHeader: FC<BlogHeaderProps> = async ({ objectId }) => {
-  const blog = await getBlog(objectId);
+const BlogHeader: FC<BlogHeaderProps> = async ({ slug }) => {
+  const blog = await getBlog(slug);
 
   return (
     <section className="space-y-2">
