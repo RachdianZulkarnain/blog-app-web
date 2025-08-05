@@ -20,6 +20,7 @@ const validationSchema = Yup.object().shape({
   thumbnail: Yup.mixed().nullable().required("Thumbnail is required"),
 });
 
+
 const WritePage = () => {
   const [selectedImage, setSelectedImage] = useState<string>("");
 
